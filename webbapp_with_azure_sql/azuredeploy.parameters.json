@@ -1,0 +1,29 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sqlAdministratorLogin": {
+      "value": "vislepak"
+    },
+    "sqlAdministratorLoginPassword": {		
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/596f6059-eeaf-466c-8229-dc7a5a1c336f/resourceGroups/shared/providers/Microsoft.KeyVault/vaults/my-kv"
+        },
+        "secretName": "sqlAdministratorLoginPassword"
+      }	
+    },
+    "webSiteName": {
+      "value": "vislepak-webappdemo"
+    },
+    "aadAudience": {
+      "value": "15c268c1-2eba-4d6e-a395-11389a15c419"
+    },
+    "aadTenant": {
+      "value": "596f6059-eeaf-466c-8229-dc7a5a1c336f"
+    },
+    "aadAuthority": {
+      "value": "https://login.microsoftonline.com/microsoft.onmicrosoft.com"
+    }						
+  }
+}
